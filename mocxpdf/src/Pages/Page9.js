@@ -1,13 +1,17 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import DualSideChart from '../Components/DualSideChart';
+import HeaderComponent from '../Components/HeaderComponent';
+import page9png from "../Assets/images/page9header.png";
+import Footer from '../Components/Footer';
+import { pageRenderingBox } from '../Assets/data/styling';
 // import bgTable from "../Assets/images/bgTable.png";
 
 const Page9 = () => {
     return (
         <Box >
-            <Box></Box>
-            <Box sx={{ display:'flex', flexDirection:"column", gap:"1rem", fontSize:"15px"}}>
+            <HeaderComponent pngImage={page9png}/>
+            <Box style={pageRenderingBox} >
                 <Typography variant="p" >A personality test is a tool to understand <b>who you are as a person</b>. This is important for an organisation because people with different personalities approach a given task in different ways.</Typography>
                 <Typography variant="p" >Below map classifies your personality based on the traits of the <b>"Big Five"</b> Model. Remember that a low percentile does not mean bad performance and high percentile does not mean good performance, as there is no concept of performance in personality.</Typography>
                 <Typography variant="p" >The personality map below shows where your position is relative to the population across different personality traits. Each bar represents your Z-score for a personality trait.</Typography>
@@ -29,7 +33,7 @@ const Page9 = () => {
                     <Typography variant="p" >A trait score of HIGH or LOW does not classify someone as GOOD or BAD. Every individual has a unique personality and different people in different kind of jobs need different personality combinations. A person with a given personality profile may be inclined to perform better in a sales job while another with a different personality may be more suitable for a software development role.</Typography>
                 </Box>
             </Box>
-            <Box></Box>
+            <Footer/>
         </Box>
     )
 }

@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, styled, useMediaQuery} from '@mui/material'
+import { Box, Stack, Typography, styled} from '@mui/material'
 import React from 'react'
 import ImageE from '../Assets/images/imgs/mocxpre-assess-report-img 6-1.png'
 import Footer from '../Components/Footer'
@@ -44,7 +44,7 @@ const Page3 = () => {
             </Stack>
             <Box sx={{height:"3px",width:'100%',bgcolor:'rgb(140,210,270)'}}></Box>
         </Box>
-        <Box sx={{position:'absolute',bottom:'0px',width:'100%',overflow:'hidden'}}>
+        <Box sx={{width:'100%',overflow:'hidden'}}>
             <Footer/>
         </Box>
     </Box>

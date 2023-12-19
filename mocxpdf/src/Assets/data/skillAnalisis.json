@@ -1,0 +1,45 @@
+[
+    {
+      "persentageScore": 67,
+      "skills": "Analytical",
+      "message": [" ","Need Training"," ","Need Practice","Good to go"],
+      "helpLinks":["Increase your analytical skills","Ace MCQs"]
+    },
+    {
+        "persentageScore": 33,
+        "skills": "Quantitative",
+        "message": [" ","Need Training"," ","Need Practice","Good to go"],
+        "helpLinks":["Maths Tips","Improve Maths Calculation","Steps to Improve Math"]
+
+    },
+    {
+        "persentageScore": 33,
+        "skills": "English",
+        "message": [" ","Need Training"," ","Need Practice","Good to go"],
+        "helpLinks":["Book: Word Power Made Easy","Understanding words in context","Understanding RC"]
+    },
+    {
+        "persentageScore": 20,
+        "skills": "Domain",
+        "message": [" ","Need Training"," ","Need Practice","Good to go"],
+        "helpLinks":["Electrical Courses from NPTEL","EE & CSE from MIT","EE Fun"]
+    },
+    {
+        "persentageScore": 33,
+        "skills": "Computer Fundamentals",
+        "message": [" ","Need Training"," ","Need Practice","Good to go"],
+        "helpLinks":["Programming from Coursera"]
+    },
+    {
+        "persentageScore": 96,
+        "skills": "Coding",
+        "message": [" ","Need Training"," ","Need Practice","Good to go"],
+        "helpLinks":["Overview of C++", "Let us C - Yashwant Kanetkar","MITs Intro to Programming","Programming from Coursera"]
+    },
+    {
+        "persentageScore": 0,
+        "skills": "WET",
+        "message": [" ","Need Training"," ","Need Practice","Good to go"],
+        "helpLinks":["Book: Word Power Made Easy","Improve Writing Skills","Check your Grammar","Blog"]
+    }
+]

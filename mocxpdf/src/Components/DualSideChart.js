@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
-import { dataset } from '../Assets/personalityData';
+import  dataset  from '../Assets/data/personalityData.json';
 // import bgTable from "../Assets/images/bgTable.png";
 import { Box } from '@mui/material';
 
@@ -11,8 +11,8 @@ const chartSetting = {
       min: -2.00
     },
   ],
-  height: 450,
-  width: 1490,
+  height: 300,
+  width: 1300,
 };
 // const imageStyle ={
 //     height: "435px",
@@ -25,7 +25,7 @@ const valueFormatter = (value) => `${value}mm`;
 
 export default function DualSideChart() {
   return (
-    <Box>
+    <Box sx={{ width: "100%", height:"15rem", backgroundColor:"pink"}}>
         {/* <img src={bgTable} alt='table' style={imageStyle}/> */}
         <BarChart
             dataset={dataset}
@@ -34,9 +34,8 @@ export default function DualSideChart() {
 
             layout="horizontal"
             {...chartSetting}
-            sx={{width:"auto", padding:"40px", position:"relative"}}
+            sx={{width:"100%", height:"100%", padding:"70px", position:"relative", backgroundColor:"green",}}
         />
     </Box>
-    
   );
 }
