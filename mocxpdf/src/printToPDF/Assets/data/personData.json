@@ -1,0 +1,81 @@
+[
+    {
+        "firstName":"Vijay",
+        "lastName":"S",
+        "id":"4072554",
+        "universityName":"Sri Venkateswara University College of Engineering",
+        "region": "Andhra Pradesh",
+        "course": "Electrical and Electronics Engineering",
+        "batch": 2024,
+        "applicationValidity":"01 September, 2024",
+        "assessedOn":"01-06-2023",
+        "overallScore":502,
+        "scoreMinRange":200,
+        "scoreMaxRange":800,
+        "institutePercentile":30,
+        "nationalPercentile":64,
+        "regionalPercentile":60,
+        "personalityData":
+        [
+            {
+              "zscore": 1,
+              "personality": "Openness"
+            },
+            {
+              "zscore": 1,
+              "personality": "Conscientiousness"
+            },
+            {
+              "zscore": 1,
+              "personality": "Extraversion"
+            },
+            {
+              "zscore": 1,
+              "personality": "Agreeableness"
+            },
+            {
+              "zscore": 1,
+              "personality": "Emotional Stability"
+            }
+        ],
+        "skillAnalisisData":
+        [
+            {
+              "persentageScore": 50,
+              "skills": "Analytical",
+              "helpLinks":["Increase your analytical skills","Ace MCQs"]
+            },
+            {
+                "persentageScore": 50,
+                "skills": "Quantitative",
+                "helpLinks":["Maths Tips","Improve Maths Calculation","Steps to Improve Math"]
+        
+            },
+            {
+                "persentageScore": 50,
+                "skills": "English",
+                "helpLinks":["Book: Word Power Made Easy","Understanding words in context","Understanding RC"]
+            },
+            {
+                "persentageScore": 50,
+                "skills": "Domain",
+                "helpLinks":["Electrical Courses from NPTEL","EE & CSE from MIT","EE Fun"]
+            },
+            {
+                "persentageScore": 50,
+                "skills": "Computer Fundamentals",
+                "helpLinks":["Programming from Coursera"]
+            },
+            {
+                "persentageScore": 50,
+                "skills": "Coding",
+                "helpLinks":["Overview of C++", "Let us C - Yashwant Kanetkar","MITs Intro to Programming","Programming from Coursera"]
+            },
+            {
+                "persentageScore": 50,
+                "skills": "WET",
+                "helpLinks":["Book: Word Power Made Easy","Improve Writing Skills","Check your Grammar","Blog"]
+            }
+        ]
+    }
+]
