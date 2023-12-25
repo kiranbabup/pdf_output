@@ -1,13 +1,23 @@
 import { Box, Typography } from "@mui/material"
-import dataset from "../Assets/data/personalityData.json"
 import PersonalityProgress from "../Components/PersonalityProgress";
 import page10to11png from "../Assets/images/page10to11header.png";
-import { barHeaderTypography, eachPersonalityBox, eachPersonalityEndTypography, eachPersonalityInnerBox, eachPersonalityPageEndBox, pageRenderingBox } from "../Assets/data/styling";
+import { bFullPDFPage, barHeaderTypography, eachPersonalityBox, eachPersonalityEndTypography, eachPersonalityInnerBox, eachPersonalityPageEndBox, pageRenderingBox } from "../Assets/data/styling";
 import Footer from "../Components/Footer";
 import HeaderComponent from "../Components/HeaderComponent";
 
-const Page10 = () => {
-    const personalityAchived =["Not Attempted","Unimaginative","Moderately Unimaginative","Moderately Imaginative","Imaginative"]
+const Page10 = ({ id,firstName, lastName,
+    OpennessZScore, 
+    ConscientiousnessZScore, 
+    ExtraversionZScore,  
+    AgreeablenessZScore, 
+    EmotionalZScore, 
+ }) => {
+    const personalityOpennessAchived =["Not Attempted","Unimaginative","Moderately Unimaginative","Moderately Imaginative","Imaginative"]
+    const personalityConscientiousnessAchived =["Not Attempted","Disorganized","Moderately Disorganized","Moderately Conscientious","Conscientious"]
+    const personalityExtraversionAchived =["Not Attempted","Introvert","Moderately Introvert","Moderately Extrovert","Extrovert"]
+    const personalityAgreeablenessAchived =["Not Attempted","Self Centered","Moderately Self Centered","Moderately Agreeable","Agreeable"]
+    const personalityEmotionalAchived =["Not Attempted","Neurotic","Moderately Neurotic","Moderately Tranquil","Tranquil"]
+
     const minValue = -2;
     const maxValue = 2;
     const convertToPercentage = (value) => {
@@ -16,85 +26,85 @@ const Page10 = () => {
             return percentage;
     };
     
-    const OpennessScore = convertToPercentage(dataset[0].zscore);
-    const ConscientiousnessScore = convertToPercentage(dataset[1].zscore);
-    const ExtraversionScore = convertToPercentage(dataset[2].zscore);
-    const AgreeablenessScore = convertToPercentage(dataset[3].zscore);
-    const EmotionalStabilityScore = convertToPercentage(dataset[4].zscore);
+    const OpennessScore = convertToPercentage(OpennessZScore);
+    const ConscientiousnessScore = convertToPercentage(ConscientiousnessZScore);
+    const ExtraversionScore = convertToPercentage(ExtraversionZScore);
+    const AgreeablenessScore = convertToPercentage(AgreeablenessZScore);
+    const EmotionalStabilityScore = convertToPercentage(EmotionalZScore);
 
     const addMessageData = (score, msg )=>{
         if (score >= 0 && score <= 20) {
-            return msg[0];
+            return msg[0].charAt(0)+".A";
         } else if (score > 20 && score <= 40) {
-            return msg[1];
+            return msg[1].charAt(0);
         } else if (score > 40 && score <= 60) {
-            return msg[2];
+            return msg[2].split(' ')[1]?.[0]?.toLowerCase();
         } else if (score > 60 && score <= 80) {
-            return msg[3];
+            return msg[3].split(' ')[1]?.[0]?.toLowerCase();
         } else if (score > 80 && score <= 100) {
-            return msg[4];
+            return msg[4].charAt(0);
         } else {
-            return msg[0];
+            return msg[0].charAt(0)+".A";
         }
     };
-    const setOpennessMessage = addMessageData(OpennessScore, personalityAchived);
-    const setConscientiousnessMessage = addMessageData(ConscientiousnessScore, personalityAchived);
-    const setExtraversionMessage = addMessageData(ExtraversionScore, personalityAchived);
-    const setAgreeablenessMessage = addMessageData(AgreeablenessScore, personalityAchived);
-    const setEmotionalStabilityMessage = addMessageData(EmotionalStabilityScore, personalityAchived);
+    const setOpennessMessage = addMessageData(OpennessScore, personalityOpennessAchived);
+    const setConscientiousnessMessage = addMessageData(ConscientiousnessScore, personalityConscientiousnessAchived);
+    const setExtraversionMessage = addMessageData(ExtraversionScore, personalityExtraversionAchived);
+    const setAgreeablenessMessage = addMessageData(AgreeablenessScore, personalityAgreeablenessAchived);
+    const setEmotionalStabilityMessage = addMessageData(EmotionalStabilityScore, personalityEmotionalAchived);
 
     return (
-        <Box>
+        <Box style={bFullPDFPage}>
             <HeaderComponent pngImage={page10to11png}/>
             <Box id='page10' style={pageRenderingBox}>
                 <Typography>Detailed description of your profile on each of the personality aspect</Typography>
                 <Box style={eachPersonalityBox} >
                     <Box style={eachPersonalityInnerBox}>
-                        <Typography style={barHeaderTypography} >{dataset[0].personality}</Typography>
+                        <Typography style={barHeaderTypography} >Openness</Typography>
                         <Typography> - General appreciation for imagination and variety of experience.</Typography>
                     </Box>
-                    <PersonalityProgress  messageData={setOpennessMessage} messagesArray={personalityAchived} scoreData={OpennessScore} />
+                    <PersonalityProgress  messageData={setOpennessMessage} messagesArray={personalityOpennessAchived} scoreData={OpennessScore} />
                     <Typography style={eachPersonalityEndTypography} >You are likely to have a balanced view towards experimentation and learning. Hence, you are likely to exercise controlled experimentation in problem solving.</Typography>
                 </Box>
                 <Box style={eachPersonalityBox} >
                     <Box style={eachPersonalityInnerBox}>
-                        <Typography style={barHeaderTypography}>{dataset[1].personality}</Typography>
+                        <Typography style={barHeaderTypography}>Conscientiousness</Typography>
                         <Typography> - General appreciation for imagination and variety of experience.</Typography>
                     </Box>
-                    <PersonalityProgress  messageData={setConscientiousnessMessage} messagesArray={personalityAchived} scoreData={ConscientiousnessScore} />
+                    <PersonalityProgress  messageData={setConscientiousnessMessage} messagesArray={personalityConscientiousnessAchived} scoreData={ConscientiousnessScore} />
                     <Typography style={eachPersonalityEndTypography}>You are likely to prefer a spontaneous approach over a systematic approach towards problem solving.</Typography>
                 </Box>
                 <Box style={eachPersonalityPageEndBox} >
                     <Box style={eachPersonalityInnerBox}>
-                        <Typography style={barHeaderTypography}>{dataset[2].personality}</Typography>
+                        <Typography style={barHeaderTypography}>Extraversion</Typography>
                         <Typography> - General appreciation for imagination and variety of experience.</Typography>
                     </Box>
-                    <PersonalityProgress  messageData={setExtraversionMessage} messagesArray={personalityAchived} scoreData={ExtraversionScore} />
+                    <PersonalityProgress  messageData={setExtraversionMessage} messagesArray={personalityExtraversionAchived} scoreData={ExtraversionScore} />
                     <Typography style={eachPersonalityEndTypography}>You are likely to be assertive, talkative, cheerful and have a the tendency to seek stimulation in the company of others. Hence, you are likely to be successful in customer/team oriented jobs.</Typography>
                 </Box>
             </Box>
-            <Footer />
+            <Footer  id={id} firstName={firstName} lastName={lastName} />
 
             <HeaderComponent pngImage={page10to11png}/>
             <Box id='page11' style={pageRenderingBox}>
                 <Box style={eachPersonalityBox} >
                     <Box style={eachPersonalityInnerBox}>
-                        <Typography style={barHeaderTypography}>{dataset[3].personality}</Typography>
+                        <Typography style={barHeaderTypography}>Agreeableness</Typography>
                         <Typography> - General appreciation for imagination and variety of experience.</Typography>
                     </Box>
-                    <PersonalityProgress  messageData={setAgreeablenessMessage} messagesArray={personalityAchived} scoreData={AgreeablenessScore} />
+                    <PersonalityProgress  messageData={setAgreeablenessMessage} messagesArray={personalityAgreeablenessAchived} scoreData={AgreeablenessScore} />
                     <Typography style={eachPersonalityEndTypography}>You are likely to be friendly and generally get along well with others. You are likely to thrive in roles requiring team interaction.</Typography>
                 </Box>
                 <Box style={eachPersonalityPageEndBox} >
                     <Box style={eachPersonalityInnerBox}>
-                        <Typography style={barHeaderTypography}>{dataset[4].personality}</Typography>
+                        <Typography style={barHeaderTypography}>Emotional Stability</Typography>
                         <Typography> - General appreciation for imagination and variety of experience.</Typography>
                     </Box>
-                    <PersonalityProgress  messageData={setEmotionalStabilityMessage} messagesArray={personalityAchived} scoreData={EmotionalStabilityScore} />
+                    <PersonalityProgress  messageData={setEmotionalStabilityMessage} messagesArray={personalityEmotionalAchived} scoreData={EmotionalStabilityScore} />
                     <Typography style={eachPersonalityEndTypography}>You are likely to be an emotional and sensitive person. Hence, you might come across as reactive and excitable</Typography>
                 </Box>
             </Box>
-            <Footer />
+            <Footer  id={id} firstName={firstName} lastName={lastName} />
             <Box>
             </Box>
         </Box>

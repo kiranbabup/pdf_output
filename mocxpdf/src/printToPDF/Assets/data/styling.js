@@ -1,16 +1,43 @@
-// After Header component Styles for Box
+//pdf height per page 1123px
+//header height 130px
+//content height 922px
+//footer height 64+7px
+
+//style used for page1,
+export const aFullPdfPage = {
+  minHeight:"1454px",
+  background: 'linear-gradient(to bottom, #08242c, #1f6679, #08242c)',
+}
+//style used for page3,
+export const bFullPDFPage ={
+  minHeight:"1454px",
+  // backgroundColor:"green"
+}
+//style used for page1, page3 - After Header component Styles for center Box
+export const ApageRenderingBox = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "1.5rem",
+  // backgroundColor:"blue",
+  // paddingBottom:"338px",
+  minHeight: "1256px",
+};
+//style used for page4, page5, page9, page10 - After Header component Styles for center Box
 export const pageRenderingBox = {
   display: "flex",
   flexDirection: "column",
   gap: "1rem",
-  paddingLeft: "2rem",
-  paddingRight: "2rem",
-  height: "1813.5px"
+  paddingLeft: "30px",
+  paddingRight: "30px",
+  // paddingBottom:"338px",
+  // backgroundColor:"blue",
+  minHeight: "1256px",
 };
+
 
 //Individual inner styles
 export const mainHeaderTypography = {
-  fontSize: "35px",
+  // fontSize: "35px",
   fontWeight: "bold",
   borderBottom: "3px solid #d4d4d4",
 };
@@ -30,7 +57,7 @@ export const eachSkillEndBox = {
   paddingBottom: "1rem",
 };
 export const barHeaderTypography = {
-  fontSize: "35px",
+  // fontSize: "35px",
   fontWeight: "bold",
 };
 export const flexWraperBox = {
@@ -67,24 +94,27 @@ export const eachPersonalityInnerBox ={
 export const eachPersonalityEndTypography={
   paddingLeft:"1rem",
 }
-//page3 styling
+
+//page3 inner stylings
 export const thirdPageContentBoxs ={
-  width:"80%",
+  width:"70%",
   display:"flex",
-  borderBottom:"5px solid #6dcff6",
+  borderBottom:"3px solid #6dcff6",
   padding:"1rem"
 }
 export const leftContentBox ={
   display:"flex",
   flexDirection:"column",
   alignItems:"end",
-  width:"85%"
+  width:"90%"
 }
 export const rightNumberTypography ={
-  width:"15%",
-  textAlign:"center",
-  fontSize:"40px"
+  width:"10%",
+  textAlign:"end",
+  fontSize:"22px"
 }
 export const leftContentTypography ={
-  color:"#7d7d87"
+  color:"#7d7d87",
+  fontSize:"14px"
 }
+//Page3 stylings end

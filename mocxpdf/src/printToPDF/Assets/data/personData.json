@@ -1,7 +1,7 @@
 [
     {
-        "firstName":"Vijay",
-        "lastName":"S",
+        "firstName":"Panigrahi",
+        "lastName":"Kiran Babu",
         "id":"4072554",
         "universityName":"Sri Venkateswara University College of Engineering",
         "region": "Andhra Pradesh",
@@ -18,30 +18,30 @@
         "personalityData":
         [
             {
-              "zscore": 1,
+              "zscore": 0.5,
               "personality": "Openness"
             },
             {
-              "zscore": 1,
+              "zscore": 0.1,
               "personality": "Conscientiousness"
             },
             {
-              "zscore": 1,
+              "zscore": -1.5,
               "personality": "Extraversion"
             },
             {
-              "zscore": 1,
+              "zscore": 1.8,
               "personality": "Agreeableness"
             },
             {
-              "zscore": 1,
+              "zscore": -0.5,
               "personality": "Emotional Stability"
             }
         ],
         "skillAnalisisData":
         [
             {
-              "persentageScore": 50,
+              "persentageScore": 80,
               "skills": "Analytical",
               "helpLinks":["Increase your analytical skills","Ace MCQs"]
             },
@@ -52,27 +52,27 @@
         
             },
             {
-                "persentageScore": 50,
+                "persentageScore": 35,
                 "skills": "English",
                 "helpLinks":["Book: Word Power Made Easy","Understanding words in context","Understanding RC"]
             },
             {
-                "persentageScore": 50,
+                "persentageScore": 45,
                 "skills": "Domain",
                 "helpLinks":["Electrical Courses from NPTEL","EE & CSE from MIT","EE Fun"]
             },
             {
-                "persentageScore": 50,
+                "persentageScore": 55,
                 "skills": "Computer Fundamentals",
                 "helpLinks":["Programming from Coursera"]
             },
             {
-                "persentageScore": 50,
+                "persentageScore": 90,
                 "skills": "Coding",
                 "helpLinks":["Overview of C++", "Let us C - Yashwant Kanetkar","MITs Intro to Programming","Programming from Coursera"]
             },
             {
-                "persentageScore": 50,
+                "persentageScore": 65,
                 "skills": "WET",
                 "helpLinks":["Book: Word Power Made Easy","Improve Writing Skills","Check your Grammar","Blog"]
             }

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
-import  dataset  from '../Assets/data/personalityData.json';
 // import bgTable from "../Assets/images/bgTable.png";
 import { Box } from '@mui/material';
 
@@ -11,8 +10,8 @@ const chartSetting = {
       min: -2.00
     },
   ],
-  height: 500,
-  width: 1300,
+  height: 400,
+  width: 1000,
 };
 // const imageStyle ={
 //     height: "435px",
@@ -23,19 +22,45 @@ const chartSetting = {
 // }
 const valueFormatter = (value) => `${value}mm`;
 
-export default function DualSideChart() {
+export default function DualSideChart({OpennessZScore,
+  ConscientiousnessZScore,
+  ExtraversionZScore,
+  AgreeablenessZScore,
+  EmotionalZScore}) {
+  const dataObtained = [
+    {
+      "zscore": OpennessZScore,
+      "personality": "Openness"
+    },
+    {
+      "zscore": ConscientiousnessZScore,
+      "personality": "Conscientiousness"
+    },
+    {
+      "zscore": ExtraversionZScore,
+      "personality": "Extraversion"
+    },
+    {
+      "zscore": AgreeablenessZScore,
+      "personality": "Agreeableness"
+    },
+    {
+      "zscore": EmotionalZScore,
+      "personality": "Emotional Stability"
+    }
+  ]
+  console.log(dataObtained);
   return (
     <Box>
         {/* <img src={bgTable} alt='table' style={imageStyle}/> */}
         <BarChart
-            dataset={dataset}
+            dataset={dataObtained}
             yAxis={[{ scaleType: 'band', dataKey: 'personality',  }]}
             series={[{ dataKey: 'zscore', valueFormatter, }]}
 
             layout="horizontal"
             {...chartSetting}
-            sx={{width:"auto", paddingLeft:"245px",paddingRight:"120px",paddingBottom:"120px",paddingTop:"70px"
-          }}
+            sx={{width:"auto", paddingLeft:"200px",paddingRight:"110px",paddingBottom:"0px",paddingTop:"50px"}}
         />
     </Box>
   );

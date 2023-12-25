@@ -3,19 +3,19 @@ import React from 'react'
 import page3png from '../Assets/images/page3header.png'
 import Footer from '../Components/Footer'
 import HeaderComponent from '../Components/HeaderComponent'
-import { leftContentBox, leftContentTypography, pageRenderingBox, rightNumberTypography, thirdPageContentBoxs } from '../Assets/data/styling'
+import { bFullPDFPage, leftContentBox, leftContentTypography, ApageRenderingBox, rightNumberTypography, thirdPageContentBoxs } from '../Assets/data/styling'
 import "@fontsource/courier-prime";
 
-const Page3 = () => {
+const Page3 = ({ id,firstName, lastName }) => {
     const leftHeaderTypography ={
-        fontSize:"40px",
+        fontSize:"24px",
         fontFamily: "Courier Prime",
         color:"#3a7ab7",
       }
   return (
-    <Box>
+    <Box style={bFullPDFPage}>
         <HeaderComponent pngImage={page3png}/>
-        <Box style={pageRenderingBox}>
+        <Box style={ApageRenderingBox}>
             <Box sx={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center",  }}>
                 <Box style={thirdPageContentBoxs}>
                     <Box style={leftContentBox}>
@@ -67,7 +67,7 @@ const Page3 = () => {
                 </Box>
             </Box>
         </Box>
-        <Footer />
+        <Footer  id={id} firstName={firstName} lastName={lastName} />
     </Box>
   )
 }
