@@ -71,5 +71,4 @@ const Page3 = ({ id,firstName, lastName }) => {
     </Box>
   )
 }
-
-export default Page3
+export default Page3;

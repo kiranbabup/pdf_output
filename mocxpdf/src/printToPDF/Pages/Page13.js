@@ -39,7 +39,7 @@ const FooterBox = styled(Box)({
   alignItems: 'center',
   gap:'3px'
 })
-const page13 = () => {
+const Page13 = () => {
   return (
     <StyledBox>
       <Stack direction="row" sx={{minHeight:"1370px"}} >
@@ -80,4 +80,4 @@ const page13 = () => {
     </StyledBox>
   )
 }
-export default page13
+export default Page13

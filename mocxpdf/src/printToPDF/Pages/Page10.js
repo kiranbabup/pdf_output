@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material"
 import PersonalityProgress from "../Components/PersonalityProgress";
-import page10to11png from "../Assets/images/page10to11header.png";
 import { bFullPDFPage, barHeaderTypography, eachPersonalityBox, eachPersonalityEndTypography, eachPersonalityInnerBox, eachPersonalityPageEndBox, pageRenderingBox } from "../Assets/data/styling";
+import page10to11png from "../Assets/images/page10to11header.png";
 import Footer from "../Components/Footer";
 import HeaderComponent from "../Components/HeaderComponent";
 

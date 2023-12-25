@@ -2,6 +2,7 @@ import './pages.css';
 import React from 'react';
 import { Box } from "@mui/material";
 import Page1 from './Pages/Page1';
+import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
 import Page4 from './Pages/Page4';
 import Page5 from './Pages/Page5';
@@ -29,6 +30,7 @@ const Pages = ({ personData }) => {
   // const [nationalPercentile,setnationalPercentile]=useState(0);
   // const [regionalPercentile,setregionalPercentile]=useState(0);
 
+  const [skillDataArray,setskillDataArray] = useState([]);
   const [analyticalSkillScore, setanalyticalSkillScore] = useState(null);
   const [analyticalSkillName, setanalyticalSkillName] = useState(null);
   const [analyticalSkillLinks, setanalyticalSkillLinks] = useState([]);
@@ -73,6 +75,7 @@ const Pages = ({ personData }) => {
     // setinstitutePercentile (personData.map(items=>items.institutePercentile));
     // setnationalPercentile (personData.map(items=>items.nationalPercentile));
     // setregionalPercentile (personData.map(items=>items.regionalPercentile));
+    setskillDataArray (personData.map(items=>items.skillAnalisisData));
 
     if (personData.length > 0) {
       const firstItem = personData[0];
@@ -140,16 +143,24 @@ const Pages = ({ personData }) => {
       setEmotionalZScore(EmotionalZScoreToSend);
 
     }
-  }, [])
+  }, [personData])
   console.log(OpennessZScore);
 
   return (
     <Box>
       <Page1 firstName={firstName} lastName={lastName} assessedOn={assessedOn} batch={batch} universityName={universityName} region={region} course={course} applicationValidity={applicationValidity} />
-      {/* <Page2 /> */}
+      <Page2 id={id} firstName={firstName} lastName={lastName} />
       <Page3 id={id} firstName={firstName} lastName={lastName} />
-      {/* <Page4 id={id} firstName={firstName} lastName={lastName} analyticalSkillName={analyticalSkillName} /> */}
-      {/* <Page5 id={id} firstName={firstName} lastName={lastName}
+      <Page4 id={id} firstName={firstName} lastName={lastName}
+        skillDataArray={skillDataArray}
+        analyticalSkillScore={analyticalSkillScore}
+        QuantitativeSkillScore={QuantitativeSkillScore}
+        EnglishSkillScore={EnglishSkillScore} 
+        DomainSkillScore={DomainSkillScore}
+        ComputerSkillScore={ComputerSkillScore}
+        CodingSkillScore={CodingSkillScore}
+        WETSkillScore={WETSkillScore} />
+      <Page5 id={id} firstName={firstName} lastName={lastName}
         analyticalSkillScore={analyticalSkillScore} analyticalSkillName={analyticalSkillName} analyticalSkillLinks={analyticalSkillLinks}
         QuantitativeSkillScore={QuantitativeSkillScore} QuantitativeSkillName={QuantitativeSkillName} QuantitativeSkillLinks={QuantitativeSkillLinks}
         EnglishSkillScore={EnglishSkillScore} EnglishSkillName={EnglishSkillName} EnglishSkillLinks={EnglishSkillLinks}
@@ -157,7 +168,7 @@ const Pages = ({ personData }) => {
         ComputerSkillScore={ComputerSkillScore} ComputerSkillName={ComputerSkillName} ComputerSkillLinks={ComputerSkillLinks}
         CodingSkillScore={CodingSkillScore} CodingSkillName={CodingSkillName} CodingSkillLinks={CodingSkillLinks}
         WETSkillScore={WETSkillScore} WETSkillName={WETSkillName} WETSkillLinks={WETSkillLinks}
-      /> */}
+      />
       <Page9 id={id} firstName={firstName} lastName={lastName}
         OpennessZScore={OpennessZScore}
         ConscientiousnessZScore={ConscientiousnessZScore}
@@ -165,14 +176,14 @@ const Pages = ({ personData }) => {
         AgreeablenessZScore={AgreeablenessZScore}
         EmotionalZScore={EmotionalZScore}
       />
-      {/* <Page10 id={id} firstName={firstName} lastName={lastName}
+      <Page10 id={id} firstName={firstName} lastName={lastName}
         OpennessZScore={OpennessZScore}
         ConscientiousnessZScore={ConscientiousnessZScore}
         ExtraversionZScore={ExtraversionZScore}
         AgreeablenessZScore={AgreeablenessZScore}
         EmotionalZScore={EmotionalZScore}
-      /> */}
-      <Page12 />
+      />
+      <Page12 id={id} firstName={firstName} lastName={lastName}/>
       <Page13 />
     </Box>
   )

@@ -17,7 +17,7 @@ export const bFullPDFPage ={
 export const ApageRenderingBox = {
   display: "flex",
   flexDirection: "column",
-  gap: "1.5rem",
+  // gap: "1.5rem",
   // backgroundColor:"blue",
   // paddingBottom:"338px",
   minHeight: "1256px",
@@ -26,7 +26,7 @@ export const ApageRenderingBox = {
 export const pageRenderingBox = {
   display: "flex",
   flexDirection: "column",
-  gap: "1rem",
+  // gap: "1rem",
   paddingLeft: "30px",
   paddingRight: "30px",
   // paddingBottom:"338px",
