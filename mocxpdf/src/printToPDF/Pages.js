@@ -7,6 +7,7 @@ import Page4 from './Pages/Page4';
 import Page5 from './Pages/Page5';
 import Page9 from './Pages/Page9';
 import Page10 from './Pages/Page10';
+import Page12 from './Pages/Page12';
 import Page13 from './Pages/Page13';
 import { useEffect, useState } from 'react';
 
@@ -171,8 +172,8 @@ const Pages = ({ personData }) => {
         AgreeablenessZScore={AgreeablenessZScore}
         EmotionalZScore={EmotionalZScore}
       /> */}
-      {/*<Page12 />*/}
-      <Page13/>
+      <Page12 />
+      <Page13 />
     </Box>
   )
 }
